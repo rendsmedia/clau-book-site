@@ -17,6 +17,13 @@ All edits go to `main` first. When a change is approved, merge `main` into `laun
 ## Layout
 
 - `site/` — everything that gets published. Only this folder is copied to the server.
+  - `index.html` — homepage: the book, key questions, author, buy
+  - `work-with-william.html` → `/work-with-william`
+  - `if-your-land-is-affected.html` → `/if-your-land-is-affected` (guide for families)
+  - `contact.html` → `/contact` (form; `/contact?enquiry=bulk` preselects the enquiry type)
+  - `404.html`
+  - `assets/css/site.css`, `assets/js/site.js` — shared by every page. Links carry `?v=dev`, which the deploy replaces with the commit code so browsers load the new version.
+  - `.htaccess` — https, clean addresses (`/contact` serves `contact.html`), noindex while staging
 - `.cpanel.yml` — cPanel Git Version Control deploy tasks (the target folder differs per branch).
 
 ## Deploy staging (now)
@@ -38,7 +45,7 @@ All edits go to `main` first. When a change is approved, merge `main` into `laun
 
 ## Go public on Google (only when the author approves)
 
-On the `launch` branch: remove the `X-Robots-Tag` block from `site/.htaccess` (keep the https redirect), remove the `<meta name="robots" ...>` line in `site/index.html`, add a sitemap, deploy, then submit in Google Search Console.
+On the `launch` branch: remove the `X-Robots-Tag` block from `site/.htaccess` (keep the https redirect), remove the `<meta name="robots" ...>` line in every page in `site/`, add a sitemap, deploy, then submit in Google Search Console.
 
 ## Contact form
 
