@@ -17,6 +17,9 @@
 <meta property="book:author" content="William Matovu">
 <meta property="book:isbn" content="9789913637527">
 <meta name="theme-color" content="#282f41">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <meta property="og:image" content="https://williammatovu.com/assets/cover-1040.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +76,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:var(--on-navy);border-bottom:1px solid #ffffff14}
 .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px}
 .mark{font-family:var(--f-ui);font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--on-navy);font-size:.88rem;display:flex;align-items:center;gap:10px}
-.mark svg{flex:none;color:var(--gold)}
+.mark img{flex:none;display:block;width:38px;height:38px}
 .top nav{display:flex;gap:22px;align-items:center;font-family:var(--f-ui);font-size:.88rem;font-weight:500}
 .top nav a{color:var(--on-navy);text-decoration:none}
 .top nav a:not(.btn){opacity:.75}.top nav a:not(.btn):hover{opacity:1}
@@ -208,7 +211,7 @@ footer a{color:var(--on-navy)}
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Back to top">
-      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 5 L17 3 L19 17 L5 19 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="3" cy="5" r="2" fill="currentColor"/></svg>
+      <img src="assets/brand/wm-mark-on-dark.svg" width="38" height="38" alt="">
       William Matovu
     </a>
     <nav aria-label="Main">
