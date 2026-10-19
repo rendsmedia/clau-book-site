@@ -1,13 +1,32 @@
-# Always use https (removes the browser's "Not secure" warning on http:// visits)
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Always use https (removes the browser's "Not secure" warning on http:// visits)
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Clean page addresses: /contact serves contact.html, and /contact.html redirects to /contact
+  RewriteCond %{THE_REQUEST} \s/+(index)\.html[\s?] [NC]
+  RewriteRule ^ / [L,R=301]
+  RewriteCond %{THE_REQUEST} \s/+([a-z0-9-]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [L,R=301]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([a-z0-9-]+)/?$ $1.html [L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# Pages are always re-checked so updates show at once; CSS/JS are versioned (?v=) on each deploy.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
 </IfModule>
 
 # Keeps williammatovu.com off Google until the author approves going public.
-# Remove this block (and the robots meta in index.html) to go public.
+# Remove this block (and the robots meta in every page) to go public.
 <IfModule mod_headers.c>
   Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>

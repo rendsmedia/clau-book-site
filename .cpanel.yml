@@ -7,3 +7,4 @@ deployment:
     - export DEPLOYPATH=/home/rends/public_html/williammatovu.com/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R site/. $DEPLOYPATH
+    - /bin/bash -c 'V=$(git rev-parse --short HEAD 2>/dev/null || date +%s); /bin/sed -i -E "s/\.(css|js)\?v=[A-Za-z0-9]+/.\1?v=$V/g" "$DEPLOYPATH"*.html'

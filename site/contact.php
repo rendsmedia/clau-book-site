@@ -20,7 +20,7 @@ const CONFIG_FILE  = '/home/rends/wm-mail-config.php';
 const MIN_SECONDS  = 3;   // humans take longer than this to fill the form
 
 function back(string $result): void {
-    header('Location: ./' . ($result !== '' ? '?' . $result : '') . '#contact', true, 303);
+    header('Location: /contact' . ($result !== '' ? '?' . $result : '') . '#form', true, 303);
     exit;
 }
 
