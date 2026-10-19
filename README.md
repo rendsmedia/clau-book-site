@@ -38,7 +38,7 @@ All edits go to `main` first. When a change is approved, merge `main` into `laun
 
 ## Go public on Google (only when the author approves)
 
-On the `launch` branch: delete `site/.htaccess`, remove the `<meta name="robots" ...>` line in `site/index.html`, add a sitemap, deploy, then submit in Google Search Console.
+On the `launch` branch: remove the `X-Robots-Tag` block from `site/.htaccess` (keep the https redirect), remove the `<meta name="robots" ...>` line in `site/index.html`, add a sitemap, deploy, then submit in Google Search Console.
 
 ## Amazon button
 

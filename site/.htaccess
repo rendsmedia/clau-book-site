@@ -1,5 +1,13 @@
+# Always use https (removes the browser's "Not secure" warning on http:// visits)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 # Keeps williammatovu.com off Google until the author approves going public.
-# Delete this file (and the robots meta in index.html) to go public.
+# Remove this block (and the robots meta in index.html) to go public.
 <IfModule mod_headers.c>
   Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>
