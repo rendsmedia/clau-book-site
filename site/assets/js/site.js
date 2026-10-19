@@ -60,3 +60,14 @@ var AMAZON_ASIN = "B0B9K66JQT";  // Kindle edition
     if(bad){e.preventDefault();show('Please fill in your name, a valid email and a message.',true);bad.focus();}
   });
 })();
+
+/* ---- Mobile menu ---- */
+(function(){
+  var btn=document.querySelector('.menu-toggle'), nav=document.getElementById('site-nav'); if(!btn||!nav) return;
+  function set(open){nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  btn.addEventListener('click',function(){set(btn.getAttribute('aria-expanded')!=='true');});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')) set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){set(false);btn.focus();}});
+  document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!e.target.closest('.top')) set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>820) set(false);});
+})();
