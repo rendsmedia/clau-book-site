@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compulsory Land Acquisition in Uganda | William Matovu</title>
+<!-- The site's permanent home. Staging on book.rendsmedia.com uses the same URLs. -->
+<link rel="canonical" href="https://williammatovu.com/">
+<!-- STAGING: remove this line when going live on williammatovu.com -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Building Uganda, or legal land grabbing? A practitioner's guide to compulsory land acquisition for road projects in Uganda, by former UNRA Head of Land Acquisition William Matovu.">
+<meta property="og:title" content="Compulsory Land Acquisition for Road Infrastructure Projects in Uganda">
+<meta property="og:description" content="Building Uganda, or legal land grabbing? The new book by William Matovu.">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://williammatovu.com/">
+<meta property="og:site_name" content="William Matovu">
+<meta property="book:author" content="William Matovu">
+<meta property="book:isbn" content="9789913637527">
+<meta name="theme-color" content="#1d3b33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: a deed plan. Sage survey paper, forest-green ink, and the one bold note:
+   the red boundary line surveyors draw around a parcel. Debates sit right under the hero. */
+:root{
+  --paper:#eef1ea;       /* sage survey paper */
+  --sheet:#f8f9f5;
+  --ink:#17302a;         /* forest ink */
+  --muted:#55665e;
+  --rule:#c7d0c4;
+  --red:#c2362b;         /* cadastral boundary red */
+  --on-red:#fff8f5;
+  --cover:#1d3b33;       /* the book itself */
+  --cover-ink:#f1ede2;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1916; --sheet:#15221e; --ink:#e4ebe5; --muted:#9db0a6; --rule:#2a3a34;
+  --red:#ee6a5a; --on-red:#1a0d0b; --cover:#24463c; --cover-ink:#f1ede2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0f1916; --sheet:#15221e; --ink:#e4ebe5; --muted:#9db0a6; --rule:#2a3a34;
+  --red:#ee6a5a; --on-red:#1a0d0b; --cover:#24463c; --cover-ink:#f1ede2; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.6}
+a{color:var(--red);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance;line-height:1.02;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:600;font-size:1rem;text-decoration:none;padding:13px 22px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);border-color:var(--red);color:var(--on-red)}
+
+/* top bar */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px}
+.mark{font-family:var(--f-display);font-weight:700;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px;font-size:1rem}
+.mark svg{flex:none}
+.top nav{display:flex;gap:22px;align-items:center;font-family:var(--f-display);font-size:.95rem}
+.top nav a{color:var(--ink);text-decoration:none}
+.top nav a:not(.btn){opacity:.75}.top nav a:not(.btn):hover{opacity:1}
+.top .btn{padding:8px 16px;font-size:.9rem}
+@media (max-width:760px){.top nav a:not(.btn){display:none}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:56px;align-items:center;padding-block:64px 72px}
+.hero h1{font-size:clamp(2.7rem,7.4vw,5.6rem);font-weight:800;margin:18px 0 22px}
+.hero h1 .q{color:var(--red);font-style:italic;font-family:var(--f-body);font-weight:500;letter-spacing:-.03em}
+.hero .lede{font-size:1.25rem;max-width:44ch;color:var(--muted)}
+.hero .lede b{color:var(--ink);font-weight:600}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+
+.bookwrap{position:relative;justify-self:center;width:min(330px,100%);max-width:100%}
+.plot{position:absolute;inset:-28px -34px -22px -30px;width:calc(100% + 64px);height:calc(100% + 50px);overflow:visible;pointer-events:none}
+.plot path{fill:none;stroke:var(--red);stroke-width:1.6;stroke-dasharray:9 6}
+.plot circle{fill:var(--paper);stroke:var(--red);stroke-width:1.6}
+.plot text{font-family:var(--f-mono);font-size:10px;fill:var(--red);letter-spacing:.06em}
+.book{position:relative;aspect-ratio:2/3;max-width:100%;background:var(--cover);color:var(--cover-ink);border-radius:3px 8px 8px 3px;padding:30px 26px 26px 34px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 9px 0 0 #00000030,inset 11px 0 0 #ffffff14,0 2px 0 #0002,24px 34px 50px -24px #0b1a15aa;transform:rotate(-2.5deg);transition:transform .4s}
+.book:hover{transform:rotate(0deg) translateY(-6px)}
+.book .bt{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:.98;letter-spacing:-.02em}
+.book .bt span{display:block;font-family:var(--f-body);font-style:italic;font-weight:400;font-size:1rem;letter-spacing:0;margin-top:10px;opacity:.85}
+.book .rule{height:2px;background:repeating-linear-gradient(90deg,#e8705f 0 10px,transparent 10px 16px);margin-block:6px}
+.book .ba{font-family:var(--f-mono);font-size:.82rem;letter-spacing:.18em}
+.book .ba small{display:block;letter-spacing:.08em;opacity:.7;margin-top:6px;font-size:.7rem}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:56px;padding-block:44px 64px}.bookwrap{width:min(260px,72%)}}
+
+/* sections */
+section{padding-block:84px;border-top:1px solid var(--rule)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:44px}
+.head h2{font-size:clamp(2rem,4.6vw,3.3rem);font-weight:800}
+.head p{color:var(--muted);max-width:52ch}
+@media (max-width:820px){.head{grid-template-columns:1fr}section{padding-block:60px}}
+
+/* debates */
+.debates{background:var(--sheet)}
+.feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;padding:38px;border:1.6px dashed var(--red);border-radius:4px;position:relative;margin-bottom:22px}
+.feature::before,.feature::after{content:"";position:absolute;width:11px;height:11px;border:1.6px solid var(--red);background:var(--sheet);border-radius:50%}
+.feature::before{top:-6.5px;left:-6.5px}.feature::after{bottom:-6.5px;right:-6.5px}
+.feature h3{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:800}
+.feature h3 em{font-family:var(--f-body);font-weight:500;color:var(--red)}
+.feature .say{display:flex;flex-direction:column;gap:14px;color:var(--muted)}
+.tag{display:inline-block;align-self:flex-start;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);border:1px solid currentColor;border-radius:999px;padding:3px 10px}
+@media (max-width:820px){.feature{grid-template-columns:1fr;padding:26px 22px;gap:18px}}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:var(--paper);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:12px;border-top:3px solid var(--ink)}
+.card h3{font-size:1.4rem;font-weight:700;line-height:1.12}
+.card p{color:var(--muted);font-size:1.02rem}
+.card .fact{font-family:var(--f-mono);font-size:.82rem;color:var(--ink);margin-top:auto;padding-top:12px;border-top:1px dashed var(--rule)}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+.cta-line{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.cta-line p{font-family:var(--f-display);font-size:1.2rem;font-weight:600}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+.nums>div{padding:22px 22px 0 0}
+.nums>div+div{padding-left:22px;border-left:1px solid var(--rule)}
+.n{font-family:var(--f-display);font-weight:800;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.n.red{color:var(--red)}
+.nums p{color:var(--muted);font-size:.98rem;margin-top:10px}
+@media (max-width:900px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.nums>div:nth-child(3){padding-left:0;border-left:0}.nums>div:nth-child(n+3){margin-top:24px}}
+@media (max-width:480px){.nums{grid-template-columns:1fr}.nums>div+div{padding-left:0;border-left:0;margin-top:24px}}
+.ladder{margin-top:46px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;align-items:end}
+.ladder div{display:flex;flex-direction:column;gap:8px;padding-right:12px}
+.ladder .bar{background:var(--ink);border-radius:2px 2px 0 0}
+.ladder .bar.r{background:var(--red)}
+.ladder b{font-family:var(--f-display);font-size:1.3rem;font-variant-numeric:tabular-nums}
+.ladder span{font-size:.88rem;color:var(--muted);line-height:1.35}
+.ladder-cap{margin-top:14px;color:var(--muted);font-size:.98rem;max-width:62ch}
+
+/* affected */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:2px solid var(--ink)}
+.steps li::before{content:counter(s);font-family:var(--f-display);font-weight:800;font-size:2.2rem;line-height:1;color:var(--red)}
+.steps h3{font-size:1.15rem;font-weight:700}
+.steps p{color:var(--muted);font-size:.98rem}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.steps{grid-template-columns:1fr}}
+.note{margin-top:24px;font-size:.92rem;color:var(--muted);font-style:italic}
+
+/* chapters */
+.inside{background:var(--sheet)}
+.chap{list-style:none;margin:0;padding:0;columns:2;column-gap:48px}
+.chap li{break-inside:avoid}
+.chap li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.chap .i{font-family:var(--f-mono);font-size:.85rem;color:var(--red);padding-top:4px}
+.chap h3{font-size:1.2rem;font-weight:700}
+.chap p{color:var(--muted);font-size:.98rem;margin-top:2px}
+@media (max-width:760px){.chap{columns:1}}
+
+/* praise */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.quotes blockquote{margin:0;display:flex;flex-direction:column;gap:16px}
+.quotes q{font-size:1.3rem;line-height:1.4;font-style:italic;quotes:"\201C" "\201D"}
+.quotes cite{font-style:normal;font-family:var(--f-display);font-weight:600;font-size:.95rem}
+.quotes cite span{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+@media (max-width:860px){.quotes{grid-template-columns:1fr;gap:30px}}
+
+/* author */
+.author .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+.author h2{font-size:clamp(2rem,4.6vw,3.3rem);font-weight:800;margin:10px 0 18px}
+.author .bio p{color:var(--muted)}.author .bio p+p{margin-top:14px}
+.author dl{margin:0;align-self:end;border-top:2px solid var(--ink)}
+.author dl div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.author dt{color:var(--muted)}
+.author dd{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.35rem;font-variant-numeric:tabular-nums}
+@media (max-width:820px){.author .wrap{grid-template-columns:1fr;gap:28px}}
+
+/* buy */
+.buy{background:var(--cover);color:var(--cover-ink);border-top:0}
+.buy .head p{color:#c7d3cc}
+.buy .opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.buy .opt{border:1.6px dashed #e8705f;border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.buy .opt h3{font-size:1.5rem}
+.buy .opt p{color:#c7d3cc}
+.buy .eyebrow{color:#e8705f}
+.buy .btn{border-color:var(--cover-ink);color:var(--cover-ink)}
+.buy .btn-red{background:#e8705f;border-color:#e8705f;color:#1a0d0b}
+.copyline{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-family:var(--f-mono);font-size:.92rem}
+.copy{font-family:var(--f-mono);font-size:.72rem;background:transparent;color:#e8705f;border:1px solid #e8705f;border-radius:999px;padding:3px 10px;cursor:pointer}
+.isbn{margin-top:30px;display:flex;flex-wrap:wrap;gap:6px 26px;font-family:var(--f-mono);font-size:.78rem;color:#a9bab1}
+@media (max-width:760px){.buy .opts{grid-template-columns:1fr}}
+footer{background:var(--cover);color:#a9bab1;border-top:1px solid #ffffff18;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:24px}
+footer a{color:#c7d3cc}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Back to top">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 5 L17 3 L19 17 L5 19 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="3" cy="5" r="2" fill="var(--red)"/></svg>
+      William Matovu
+    </a>
+    <nav aria-label="Main">
+      <a href="#debates">The debates</a>
+      <a href="#affected">If you're affected</a>
+      <a href="#inside">Inside</a>
+      <a href="#author">Author</a>
+      <a class="btn btn-red" href="#buy">Get the book</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">New book · William Matovu</span>
+      <h1>Building Uganda, or <span class="q">legal land grabbing?</span></h1>
+      <p class="lede">Every new road starts on someone's land. The former Head of Land Acquisition at UNRA explains why it so often ends in delays, disputes and court, and <b>how to do it fairly, faster and cheaper.</b></p>
+      <div class="ctas">
+        <a class="btn btn-red" data-amazon href="https://www.amazon.com/s?k=Compulsory+Land+Acquisition+Road+Infrastructure+Uganda+Matovu&amp;i=stripbooks" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn" href="#debates">Read the debates</a>
+      </div>
+      <div class="meta"><span>149 national road projects</span><span>≈ 400,000 affected people</span><span>8 chapters</span></div>
+    </div>
+    <div class="bookwrap">
+      <svg class="plot" viewBox="0 0 400 560" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M14 22 L384 8 L392 540 L8 552 Z"/>
+        <circle cx="14" cy="22" r="5"/><circle cx="384" cy="8" r="5"/><circle cx="392" cy="540" r="5"/><circle cx="8" cy="552" r="5"/>
+      </svg>
+      <div class="book" role="img" aria-label="The book: Compulsory Land Acquisition for Road Infrastructure Projects in Uganda, by William Matovu">
+        <div class="bt">Compulsory Land Acquisition<span>for Road Infrastructure Projects in Uganda</span></div>
+        <div><div class="rule"></div><div class="ba">WILLIAM MATOVU<small>A Practitioner's Mind · 1st Edition</small></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="debates" id="debates">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">The debates</span><h2 style="margin-top:12px">Seven arguments this book will start</h2></div>
+      <p>Some of these will make officials uncomfortable. Some will make landowners angry. All of them come straight from the book.</p>
+    </div>
+
+    <article class="feature">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span class="tag">Chapter 1 · Chapter 8</span>
+        <h3>Should government take your land <em>before</em> paying you?</h3>
+      </div>
+      <div class="say">
+        <p>Uganda's Constitution says no: payment must be prompt, fair, adequate and made first. The Supreme Court struck down part of the Land Acquisition Act for allowing otherwise.</p>
+        <p>Kenya and Tanzania let the state take possession first and pay interest while it owes. The author argues Uganda should look hard at that model, because the cost of waiting falls on every taxpayer.</p>
+      </div>
+    </article>
+
+    <div class="grid">
+      <article class="card"><span class="tag">Chapter 6</span><h3>Is compulsory acquisition just "legal" land grabbing?</h3><p>Many affected families see it that way. The book argues the power isn't the problem; late planning and late payment are.</p><span class="fact">Even with timely payment, some dissatisfaction persists.</span></article>
+      <article class="card"><span class="tag">Chapter 1 · 8</span><h3>Who gave the Chief Government Valuer the final word?</h3><p>No law establishes the office, so its valuations are routinely challenged. Tanzania's Chief Valuer, by contrast, is created by statute.</p><span class="fact">Valuation Bill 2018: still waiting.</span></article>
+      <article class="card"><span class="tag">Chapter 1</span><h3>Kibanja 70%, landlord 30%. Says who?</h3><p>That split is how compensation is commonly shared between a kibanja holder and the registered owner. No law or regulation sets it.</p><span class="fact">Practice, not law.</span></article>
+      <article class="card"><span class="tag">Chapter 4</span><h3>The road was announced. Then it vanished.</h3><p>On Kyotera–Rakai, a full RAP was approved and building was restricted in 2017. Eighteen months later the project was abandoned for lack of funds.</p><span class="fact">Claims for lost business: still unresolved.</span></article>
+      <article class="card"><span class="tag">Chapter 8</span><h3>Billions sent back while families waited</h3><p>In FY 2017/18, families on Musita–Lumino–Busia were owed about UGX 6bn with no funds for it. Meanwhile about UGX 71bn faced return to the Treasury, locked by budget rules.</p><span class="fact">Re-allocation limited to 10%.</span></article>
+      <article class="card"><span class="tag">Chapter 1</span><h3>When the paperwork costs more than the payout</h3><p>Some families must get letters of administration or powers of attorney before they can be paid. Sometimes those documents cost more than the compensation itself.</p><span class="fact">So many never claim at all.</span></article>
+    </div>
+
+    <div class="cta-line"><p>Where do you stand? Read the full arguments.</p><a class="btn btn-red" href="#buy">Get the book</a></div>
+  </div>
+</section>
+
+<section id="numbers">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">From the record</span><h2 style="margin-top:12px">What getting land wrong costs</h2></div>
+      <p>When roads start before the land is ready, contractors sit idle and bill for it. When the process is fixed, the savings are large.</p>
+    </div>
+    <div class="nums">
+      <div><div class="n red">UGX 359bn</div><p>Lost to contractor claims on the Kampala–Entebbe Expressway, finished a year late</p></div>
+      <div><div class="n red">90%+</div><p>Share of lawsuits against UNRA caused by delayed compensation, before reforms</p></div>
+      <div><div class="n">64.5%</div><p>Fall in the cost of acquiring land after UNRA moved the work in-house (45 projects studied)</p></div>
+      <div><div class="n">53.2%</div><p>Reduction in time to complete land acquisition over the same period</p></div>
+    </div>
+    <div class="ladder" aria-label="One piece of land, three valuations">
+      <div><div class="bar" style="height:31px"></div><b>UGX 294.4M</b><span>2012 · Consultant's valuation, approved by the Chief Government Valuer</span></div>
+      <div><div class="bar r" style="height:136px"></div><b>UGX 1.3B</b><span>The owner's own valuation report</span></div>
+      <div><div class="bar" style="height:100px"></div><b>UGX 951.6M</b><span>Two years later · the Chief Government Valuer's re-assessment</span></div>
+    </div>
+    <p class="ladder-cap">One piece of land, three valuations. Without national valuation standards, disputes like this can hold up a road for years.</p>
+  </div>
+</section>
+
+<section id="affected">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">For affected families</span><h2 style="margin-top:12px">A road is coming through your land. What now?</h2></div>
+      <p>The five moments that matter most to a household, in the order they happen.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Go to the meetings</h3><p>Before any survey, the project meets the community. A grievance committee is elected from your village to carry complaints.</p></li>
+      <li><h3>Stop building at the cut-off</h3><p>Once the corridor is gazetted, new buildings or crops are not eligible for compensation.</p></li>
+      <li><h3>Check the strip map</h3><p>It's displayed publicly. Confirm your name and plot boundaries before the valuation is final.</p></li>
+      <li><h3>Have your papers ready</h3><p>Title, sale agreement, letters of administration. Missing documents are a top cause of delay.</p></li>
+      <li><h3>Plan the money first</h3><p>A 15% disturbance allowance is added, or 30% with under six months' notice. Replace land, house and income first.</p></li>
+    </ol>
+    <p class="note">General information from the book, not legal advice.</p>
+  </div>
+</section>
+
+<section class="inside" id="inside">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Inside the book</span><h2 style="margin-top:12px">Eight chapters, in the order a project runs</h2></div>
+      <p>From the first planning decision to the year after the road opens, with a comparison of Ethiopia, Kenya and Tanzania.</p>
+    </div>
+    <ol class="chap">
+      <li><span class="i">01</span><div><h3>Introduction</h3><p>Land tenure, the law, key concepts and what slows acquisition down.</p></div></li>
+      <li><span class="i">02</span><div><h3>Investment Planning</h3><p>Screening social risk before money is committed.</p></div></li>
+      <li><span class="i">03</span><div><h3>Preliminary Design</h3><p>Options, the RAP framework and stakeholder engagement.</p></div></li>
+      <li><span class="i">04</span><div><h3>RAP Preparation</h3><p>Surveys, valuation, census, gazetting and vulnerable households.</p></div></li>
+      <li><span class="i">05</span><div><h3>RAP Implementation</h3><p>Disclosure, financial literacy, payment, titling and clearing the land.</p></div></li>
+      <li><span class="i">06</span><div><h3>During and Post Construction</h3><p>Design changes, injurious affection and the completion audit.</p></div></li>
+      <li><span class="i">07</span><div><h3>Information Management</h3><p>Keeping thousands of land titles and files safe and findable.</p></div></li>
+      <li><span class="i">08</span><div><h3>Last Thoughts</h3><p>Lessons from three neighbours and from UNRA's reforms.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="praise">
+  <div class="wrap">
+    <div class="head"><div><span class="eyebrow">Endorsements</span><h2 style="margin-top:12px">The first of its kind in Uganda</h2></div></div>
+    <div class="quotes">
+      <blockquote><q>It has a great wealth of information. It is the first of its kind in the country.</q><cite>Pheona Wall Nabaasa<span>President, Uganda Law Society, at publication</span></cite></blockquote>
+      <blockquote><q>A good contribution to the solving of the prevailing land acquisition problems.</q><cite>Eng. Samuel Muhoozi<span>Director, Roads and Bridges Development, UNRA</span></cite></blockquote>
+      <blockquote><q>A good reference point for anyone in this business or affected by the actions of acquisition of land for public use.</q><cite>Eng. Charles Kizito<span>Head, Corporate Strategy, UNRA</span></cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="author" id="author">
+  <div class="wrap">
+    <div class="bio">
+      <span class="eyebrow">The author</span>
+      <h2>William Matovu</h2>
+      <p>A land surveyor and land acquisition, resettlement and social sustainability specialist. He was Head of Land Acquisition at the Uganda National Roads Authority for five years until December 2020, and earlier headed land surveying during the transformation of Kampala City Council into KCCA.</p>
+      <p>He is a fellow of the Institute of Surveyors of Uganda, holds a BSc in Land Surveying and an MSc in Management, and trains trainers in financial literacy.</p>
+    </div>
+    <dl>
+      <div><dt>Years in land management</dt><dd>15+</dd></div>
+      <div><dt>National road projects</dt><dd>149</dd></div>
+      <div><dt>Households reached</dt><dd>75,000+</dd></div>
+      <div><dt>Project affected persons</dt><dd>≈ 400,000</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="buy" id="buy">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Get the book</span><h2 style="margin-top:12px">Join the debate with the full story</h2></div>
+      <p>Available worldwide on Amazon, with print copies and bulk orders in Uganda.</p>
+    </div>
+    <div class="opts">
+      <div class="opt">
+        <span class="eyebrow">Worldwide</span>
+        <h3>Amazon</h3>
+        <p>Kindle ebook and paperback. The button opens the Amazon store for your country.</p>
+        <a class="btn btn-red" id="amazon" data-amazon href="https://www.amazon.com/s?k=Compulsory+Land+Acquisition+Road+Infrastructure+Uganda+Matovu&amp;i=stripbooks" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+      <div class="opt">
+        <span class="eyebrow">In Uganda</span>
+        <h3>Print copies and bulk orders</h3>
+        <p>For agencies, firms, universities and law schools.</p>
+        <div class="copyline"><span id="mail">business@rendsmedia.com</span><button class="copy" type="button" data-copy="mail">Copy</button></div>
+        <div class="copyline"><span id="tel">+256 705 283 188</span><button class="copy" type="button" data-copy="tel">Copy</button></div>
+        <a class="btn" href="https://wa.me/256705283188" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="isbn"><span>ISBN 978-9913-637-52-7 (print)</span><span>First Edition</span><span>Rends Digital Production</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© William Matovu · williammatovu.com · Published by Rends Digital Production, Kampala.</span>
+    <a href="https://rendsmedia.com" target="_blank" rel="noopener">Site by Rends Digital</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy),t=el.textContent;
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)}
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+  });
+});
+
+/* ---- Amazon: send each reader to their own Amazon store ----
+   KDP books keep the same ASIN in every Amazon marketplace, so one ASIN
+   is enough. Paste it below (from KDP Bookshelf, or the "ASIN" line on the
+   Amazon page). Until it is set, buttons fall back to an Amazon search. */
+var AMAZON_ASIN = "";
+(function(){
+  var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch(e) {}
+  var stores = [
+    [/^Europe\/London|^Europe\/(Belfast|Guernsey|Isle_of_Man|Jersey)/, "amazon.co.uk"],
+    [/^Europe\/Dublin/, "amazon.co.uk"],
+    [/^Europe\/(Berlin|Vienna|Zurich|Busingen)/, "amazon.de"],
+    [/^Europe\/Paris|^Europe\/(Brussels|Luxembourg|Monaco)/, "amazon.fr"],
+    [/^Europe\/(Rome|Vatican|San_Marino)/, "amazon.it"],
+    [/^Europe\/Madrid|^Atlantic\/Canary/, "amazon.es"],
+    [/^Europe\/Amsterdam/, "amazon.nl"],
+    [/^Europe\/Warsaw/, "amazon.pl"],
+    [/^Europe\/Stockholm/, "amazon.se"],
+    [/^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Montreal)/, "amazon.ca"],
+    [/^America\/(Mexico_City|Cancun|Monterrey|Tijuana|Merida|Chihuahua)/, "amazon.com.mx"],
+    [/^America\/(Sao_Paulo|Recife|Fortaleza|Bahia|Manaus|Belem)/, "amazon.com.br"],
+    [/^Australia\//, "amazon.com.au"],
+    [/^Asia\/(Kolkata|Calcutta)/, "amazon.in"],
+    [/^Asia\/Tokyo/, "amazon.co.jp"]
+  ];
+  var host = "amazon.com";
+  for (var i = 0; i < stores.length; i++) { if (stores[i][0].test(tz)) { host = stores[i][1]; break; } }
+  var url = AMAZON_ASIN
+    ? "https://www." + host + "/dp/" + AMAZON_ASIN
+    : "https://www." + host + "/s?k=Compulsory+Land+Acquisition+Road+Infrastructure+Uganda+Matovu&i=stripbooks";
+  document.querySelectorAll("[data-amazon]").forEach(function(a){ a.href = url; });
+})();
+</script>
+
+</body>
+</html>

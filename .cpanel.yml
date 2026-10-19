@@ -1,0 +1,9 @@
+---
+# cPanel Git Version Control deployment for the CLAU book site.
+# STAGING: copies /site to the book.rendsmedia.com subdomain folder.
+# LAUNCH: change DEPLOYPATH to the williammatovu.com document root.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/rends/public_html/book.rendsmedia.com/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R site/. $DEPLOYPATH

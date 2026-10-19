@@ -1,0 +1,4 @@
+# Staging. Pages also send "X-Robots-Tag: noindex" so search engines drop them.
+# Do NOT add "Disallow: /" here: it would stop crawlers from seeing the noindex.
+User-agent: *
+Allow: /
