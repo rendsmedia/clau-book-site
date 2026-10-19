@@ -42,16 +42,15 @@ On the `launch` branch: delete `site/.htaccess`, remove the `<meta name="robots"
 
 ## Amazon button
 
-Every "Buy on Amazon" button sends readers to the Amazon store for their country (amazon.co.uk in the UK, amazon.de in Germany, amazon.com for Uganda, the US and anywhere without a local store). Set the book's ASIN once in `site/index.html`:
+Every "Buy on Amazon" button sends readers to the Amazon store for their country (amazon.co.uk in the UK, amazon.de in Germany, amazon.com for Uganda, the US and anywhere without a local store). It uses the Kindle edition's ASIN, set once in `site/index.html`:
 
 ```js
-var AMAZON_ASIN = "";
+var AMAZON_ASIN = "B0B9K66JQT";
 ```
 
-Until it is set, the buttons open an Amazon search for the book.
+Kindle edition: https://www.amazon.com/dp/B0B9K66JQT. Print in Uganda: [Aristoc Booklex](https://www.aristocbooklex.com/book/compulsory-land-acquisition-for-road-infrastructure-in-uganda).
 
 ## Before launch
 
-- [ ] Set `AMAZON_ASIN`
 - [ ] Add launch photos and the three YouTube videos
 - [ ] Author approves all wording, especially "The debates"
