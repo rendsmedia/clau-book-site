@@ -1,5 +1,5 @@
-# STAGING ONLY: tell search engines not to index anything on this subdomain.
-# Delete this file (or these lines) when the site goes live on williammatovu.com.
+# Keeps williammatovu.com off Google until the author approves going public.
+# Delete this file (and the robots meta in index.html) to go public.
 <IfModule mod_headers.c>
   Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>
