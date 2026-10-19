@@ -40,6 +40,21 @@ All edits go to `main` first. When a change is approved, merge `main` into `laun
 
 On the `launch` branch: remove the `X-Robots-Tag` block from `site/.htaccess` (keep the https redirect), remove the `<meta name="robots" ...>` line in `site/index.html`, add a sitemap, deploy, then submit in Google Search Console.
 
+## Contact form
+
+`site/contact.php` emails each enquiry to **hello@williammatovu.com** and stores nothing. Spam is filtered with a hidden field and a minimum fill time.
+
+The host intercepts outgoing SMTP, so mail goes through a small Google Apps Script, the same way as rendsmedia.com:
+
+1. Set up `tools/contact-form-google-script.gs` (steps are in the file).
+2. On the server, create `/home/rends/wm-mail-config.php` (outside `public_html`, never in this repo):
+   ```php
+   <?php return ['to' => 'hello@williammatovu.com', 'script_url' => 'https://script.google.com/macros/s/.../exec', 'secret' => '...'];
+   ```
+3. **Until hello@williammatovu.com has a working mailbox**, set `'to' => 'business@rendsmedia.com'` so no enquiry is lost.
+
+Without the config file, the server's own `mail()` is used as a fallback.
+
 ## Amazon button
 
 Every "Buy on Amazon" button sends readers to the Amazon store for their country (amazon.co.uk in the UK, amazon.de in Germany, amazon.com for Uganda, the US and anywhere without a local store). It uses the Kindle edition's ASIN, set once in `site/index.html`:

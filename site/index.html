@@ -10,7 +10,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="A practitioner's guide to compulsory land acquisition for road projects in Uganda, by former UNRA Head of Land Acquisition William Matovu.">
 <meta property="og:title" content="Compulsory Land Acquisition for Road Infrastructure Projects in Uganda">
-<meta property="og:description" content="A practitioner's guide to acquiring land for Uganda's roads fairly, on time and at lower cost. The new book by William Matovu.">
+<meta property="og:description" content="A practitioner's guide to acquiring land for Uganda's roads fairly, on time and at lower cost. A book by William Matovu.">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://williammatovu.com/">
 <meta property="og:site_name" content="William Matovu">
@@ -203,6 +203,41 @@ section{padding-block:84px;border-top:1px solid var(--rule)}
 .copy{font-family:var(--f-ui);font-size:.72rem;font-weight:600;background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:2px;padding:3px 10px;cursor:pointer}
 .isbn{margin-top:30px;display:flex;flex-wrap:wrap;gap:6px 26px;font-family:var(--f-ui);font-size:.78rem;color:var(--on-navy-muted)}
 @media (max-width:760px){.buy .opts{grid-template-columns:1fr}}
+/* work with William */
+.work{background:var(--sheet)}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+.offers article{padding:24px 28px 4px 0;display:flex;flex-direction:column;gap:10px}
+.offers article+article{padding-left:28px;border-left:1px solid var(--rule)}
+.offers .num{font-family:var(--f-title);font-weight:700;font-size:1.05rem;color:var(--accent-ink);letter-spacing:.08em}
+.offers h3{font-family:var(--f-title);font-size:1.55rem;font-weight:700;letter-spacing:.01em}
+.offers p{color:var(--muted);font-size:1.02rem}
+.offers ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:.98rem}
+.offers li{padding-left:18px;position:relative}
+.offers li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--gold)}
+@media (max-width:860px){.offers{grid-template-columns:1fr}.offers article+article{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:20px}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.contact h2{font-size:clamp(1.8rem,3.8vw,2.7rem)}
+.contact-intro>p{color:var(--muted);margin-top:16px;max-width:42ch}
+.direct{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);display:grid;gap:8px}
+.contact .copyline{font-size:1.05rem;color:var(--ink)}
+.contact .copy{color:var(--accent-ink);border-color:var(--accent-ink)}
+.form{display:grid;gap:16px;background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--gold);border-radius:3px;padding:28px}
+.form .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.form label{display:block;font-family:var(--f-ui);font-weight:600;font-size:.85rem;color:var(--ink)}
+.form label>input,.form label>select,.form label>textarea{display:block;margin-top:6px}
+.form .opt{font-weight:500;color:var(--muted)}
+.form input,.form select,.form textarea{font:inherit;font-family:var(--f-body);font-weight:400;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:3px;padding:11px 12px;width:100%;min-width:0}
+.form textarea{resize:vertical;min-height:130px}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:transparent}
+.form [aria-invalid="true"]{border-color:#c0392b}
+.form .btn{justify-self:start;cursor:pointer}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.status{font-family:var(--f-ui);font-size:.92rem;font-weight:600;padding:12px 14px;border-radius:3px;border-left:4px solid var(--green);background:var(--paper)}
+.status.error{border-left-color:#c0392b}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:32px}}
+@media (max-width:560px){.form .row{grid-template-columns:1fr}.form{padding:20px}}
 footer{background:var(--navy-2);color:var(--on-navy-muted);font-size:.88rem;font-family:var(--f-ui)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:24px}
 footer a{color:var(--on-navy)}
@@ -217,9 +252,9 @@ footer a{color:var(--on-navy)}
     <nav aria-label="Main">
       <a href="#about">The book</a>
       <a href="#debates">Key questions</a>
-      <a href="#affected">If you're affected</a>
-      <a href="#inside">Inside</a>
       <a href="#author">Author</a>
+      <a href="#work">Work with William</a>
+      <a href="#contact">Contact</a>
       <a class="btn btn-red" href="#buy">Get the book</a>
     </nav>
   </div>
@@ -229,7 +264,7 @@ footer a{color:var(--on-navy)}
 <div class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">New book · First Edition</span>
+      <span class="eyebrow">The first book of its kind in Uganda</span>
       <h1>Compulsory Land Acquisition<small>for Road Infrastructure Projects in Uganda</small></h1>
       <p class="sub">A Practitioner's Mind · by William Matovu</p>
       <p class="lede">A step-by-step guide to acquiring land for Uganda's roads fairly, on time and at lower cost, from the man who led land acquisition at the Uganda National Roads Authority.</p>
@@ -379,11 +414,54 @@ footer a{color:var(--on-navy)}
     </div>
   </div>
 </section>
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Beyond the book</span><h2 style="margin-top:12px">Work with William</h2></div>
+      <p>The book distils more than fifteen years of practice. William also works directly with governments, agencies, development partners and firms that acquire land for public infrastructure.</p>
+    </div>
+    <div class="offers">
+      <article>
+        <span class="num">I</span>
+        <h3>Advisory</h3>
+        <p>Land acquisition and resettlement advice for projects and institutions.</p>
+        <ul>
+          <li>Review of RAPs and acquisition plans</li>
+          <li>Setting up in-house land acquisition units</li>
+          <li>Aligning ESIA, RAP and design from the start</li>
+          <li>Policy and process improvement</li>
+        </ul>
+      </article>
+      <article>
+        <span class="num">II</span>
+        <h3>Training</h3>
+        <p>Practical courses built on the book's step-by-step process.</p>
+        <ul>
+          <li>Workshops for agency and RAP teams</li>
+          <li>Grievance committee training</li>
+          <li>Financial literacy for affected households</li>
+          <li>Leadership and performance coaching</li>
+        </ul>
+      </article>
+      <article>
+        <span class="num">III</span>
+        <h3>Speaking</h3>
+        <p>Talks drawn from the field, for audiences who build and govern.</p>
+        <ul>
+          <li>Conference keynotes and panels</li>
+          <li>University and professional lectures</li>
+          <li>Sector forums and policy dialogues</li>
+        </ul>
+      </article>
+    </div>
+    <div class="cta-line"><p>Planning a project, a training or an event?</p><a class="btn" href="#contact" data-enquiry="advisory">Start a conversation</a></div>
+  </div>
+</section>
 
 <section class="buy" id="buy">
   <div class="wrap">
     <div class="head">
-      <div><span class="eyebrow">Get the book</span><h2 style="margin-top:12px">Join the debate with the full story</h2></div>
+      <div><span class="eyebrow">Get the book</span><h2 style="margin-top:12px">Get your copy</h2></div>
       <p>On Kindle worldwide through Amazon, and in print in Uganda through Aristoc Booklex.</p>
     </div>
     <div class="opts">
@@ -398,20 +476,56 @@ footer a{color:var(--on-navy)}
         <h3>Aristoc Booklex</h3>
         <p>Buy the print edition from Uganda's leading bookshop, online or in store.</p>
         <a class="btn btn-red" href="https://www.aristocbooklex.com/book/compulsory-land-acquisition-for-road-infrastructure-in-uganda" target="_blank" rel="noopener">Buy at Aristoc</a>
-        <p style="margin-top:10px">Bulk orders for agencies, firms, universities and law schools:</p>
-        <div class="copyline"><span id="mail">business@rendsmedia.com</span><button class="copy" type="button" data-copy="mail">Copy</button></div>
-        <div class="copyline"><span id="tel">+256 705 283 188</span><button class="copy" type="button" data-copy="tel">Copy</button></div>
-        <a class="btn" href="https://wa.me/256705283188" target="_blank" rel="noopener">Order on WhatsApp</a>
+        <p style="margin-top:10px">Ordering for an agency, firm, university or law school?</p>
+        <a class="btn" href="#contact" data-enquiry="bulk">Ask about bulk orders</a>
       </div>
     </div>
     <div class="isbn"><span>ISBN 978-9913-637-52-7 (print)</span><span>First Edition</span><span>Rends Digital Production</span></div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-intro">
+      <span class="eyebrow">Contact</span>
+      <h2 style="margin-top:12px">Get in touch</h2>
+      <p>For advisory work, training, speaking, bulk book orders or media requests, send a short note. You'll get a reply within two working days.</p>
+      <div class="direct">
+        <span class="eyebrow">Email</span>
+        <div class="copyline"><span id="mail">hello@williammatovu.com</span><button class="copy" type="button" data-copy="mail">Copy</button></div>
+      </div>
+    </div>
+    <form class="form" id="form" action="contact.php" method="post" novalidate>
+      <div class="status" id="form-status" role="status" hidden></div>
+      <div class="row">
+        <label for="f-name">Your name<input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120"></label>
+        <label for="f-org">Organisation <span class="opt">(optional)</span><input id="f-org" name="organisation" type="text" autocomplete="organization" maxlength="160"></label>
+      </div>
+      <div class="row">
+        <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160"></label>
+        <label for="f-phone">Phone <span class="opt">(optional)</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></label>
+      </div>
+      <label for="f-enquiry">How can William help?
+        <select id="f-enquiry" name="enquiry" required>
+          <option value="advisory">Advisory for a project or institution</option>
+          <option value="training">Training or a workshop</option>
+          <option value="speaking">Speaking, a panel or a lecture</option>
+          <option value="bulk">Bulk book order</option>
+          <option value="media">Media or interview</option>
+          <option value="other">Something else</option>
+        </select>
+      </label>
+      <label for="f-message">Message<textarea id="f-message" name="message" rows="5" required maxlength="5000"></textarea></label>
+      <div class="hp" aria-hidden="true"><label for="f-website">Website<input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+      <input type="hidden" name="started" id="f-started" value="">
+      <button class="btn btn-red" type="submit">Send message</button>
+    </form>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© William Matovu · williammatovu.com · Published by Rends Digital Production, Kampala.</span>
+    <span>© William Matovu · hello@williammatovu.com · Published by Rends Digital Production, Kampala.</span>
     <a href="https://rendsmedia.com" target="_blank" rel="noopener">Site by Rends Digital</a>
   </div>
 </footer>
@@ -456,6 +570,27 @@ var AMAZON_ASIN = "B0B9K66JQT";  // Kindle edition
     ? "https://www." + host + "/dp/" + AMAZON_ASIN
     : "https://www." + host + "/s?k=Compulsory+Land+Acquisition+Road+Infrastructure+Uganda+Matovu&i=stripbooks";
   document.querySelectorAll("[data-amazon]").forEach(function(a){ a.href = url; });
+})();
+/* ---- Contact form ---- */
+(function(){
+  var form=document.getElementById('form'); if(!form) return;
+  var status=document.getElementById('form-status'), sel=document.getElementById('f-enquiry');
+  document.getElementById('f-started').value=Date.now();
+  function show(msg,err){status.textContent=msg;status.className='status'+(err?' error':'');status.hidden=false;}
+  // Buttons elsewhere on the page preselect the enquiry type
+  document.querySelectorAll('[data-enquiry]').forEach(function(a){a.addEventListener('click',function(){sel.value=a.dataset.enquiry;});});
+  // Result after the server redirects back
+  var q=location.search;
+  if(/[?&]sent=1/.test(q)) show('Thank you. Your message has been sent, and William will reply within two working days.');
+  else if(/[?&]error=1/.test(q)) show('Your message could not be sent. Please check the fields, or email hello@williammatovu.com directly.',true);
+  form.addEventListener('submit',function(e){
+    var bad=null;
+    form.querySelectorAll('[required]').forEach(function(f){
+      var ok=f.value.trim()!=='' && (f.type!=='email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
+      f.setAttribute('aria-invalid',ok?'false':'true'); if(!ok&&!bad) bad=f;
+    });
+    if(bad){e.preventDefault();show('Please fill in your name, a valid email and a message.',true);bad.focus();}
+  });
 })();
 </script>
 
