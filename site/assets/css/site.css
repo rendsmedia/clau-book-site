@@ -9,7 +9,8 @@
   --on-navy-muted:#aeb5c4;
   --gold:#f5b21b;        /* cover title and author band */
   --on-gold:#1f2534;
-  --paper:#f6f6f3;       /* page */
+  --paper:#f8f6f1;       /* page, a touch warmer */
+  --gold-tint:#fdf3da;   /* soft gold for highlight bands */
   --sheet:#ffffff;
   --ink:#232a3b;
   --muted:#5a6275;
@@ -20,13 +21,7 @@
   --f-ui:"Montserrat",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;
   --f-body:"Newsreader",Georgia,"Times New Roman",serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#161b26; --sheet:#1d2330; --ink:#e8eaef; --muted:#a3abbb; --rule:#2f3646;
-  --accent-ink:#f5b21b; --green:#7fb878; --navy:#20263a; --navy-2:#171c2a; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#161b26; --sheet:#1d2330; --ink:#e8eaef; --muted:#a3abbb; --rule:#2f3646;
-  --accent-ink:#f5b21b; --green:#7fb878; --navy:#20263a; --navy-2:#171c2a; color-scheme:dark}
-
+ 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
@@ -298,3 +293,37 @@ footer a{color:var(--on-navy)}
 .notfound{padding-block:120px;text-align:left}
 .notfound h1{font-size:clamp(2rem,5vw,3.4rem)}
 .notfound p{color:var(--muted);margin:16px 0 26px;max-width:46ch}
+
+/* ---- contrast pass: navy only for the cover hero and the footer; everything else light ---- */
+:root{color-scheme:light}
+body::before{background:#fff}
+.top{background:#fff;color:var(--ink);border-bottom:1px solid var(--rule);box-shadow:0 6px 18px -14px #1f253440}
+.mark{color:var(--navy)}
+.top nav a{color:var(--ink)}
+.top nav a:not(.btn){opacity:.82}
+.menu-toggle{border-color:var(--rule);color:var(--navy)}
+@media (max-width:820px){.top nav{background:#fff;box-shadow:0 18px 30px -18px #1f253466}.top nav a,.top nav a:not(.btn){border-bottom-color:var(--rule)}.top nav a[aria-current="page"]{color:var(--accent-ink)}}
+.top nav a[aria-current="page"]{opacity:1}
+
+.feature{background:var(--gold-tint);color:var(--ink);border:1px solid #f1dfae;border-bottom:6px solid var(--gold)}
+.feature h3{color:var(--navy)}
+.feature h3 em{color:var(--accent-ink)}
+.feature .say{color:var(--muted)}
+.feature .tag{color:var(--accent-ink)}
+
+.buy{background:var(--gold-tint);color:var(--ink)}
+.buy .head p,.buy .opt p,.buy .isbn{color:var(--muted)}
+.buy .opt{background:#fff;border:1px solid #efdcaa;border-top:4px solid var(--gold)}
+.buy .eyebrow{color:var(--accent-ink)}
+.buy .btn{color:var(--ink)}
+.buy .btn-red{color:var(--on-gold)}
+
+.page-hero{background:var(--sheet);color:var(--ink);border-bottom:1px solid var(--rule)}
+.page-hero h1{color:var(--navy)}
+.page-hero .eyebrow{color:var(--accent-ink)}
+.page-hero p{color:var(--ink)}
+.page-hero .crumb,.page-hero .crumb a{color:var(--muted)}
+
+.callout{background:var(--gold-tint);color:var(--ink);border:1px solid #f1dfae;border-bottom:6px solid var(--gold)}
+.callout h3{color:var(--navy)}
+.callout p{color:var(--muted)}
