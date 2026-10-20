@@ -5,7 +5,7 @@
  * a success or error message. Stores nothing.
  *
  * Settings live in a file OUTSIDE the website folder and outside this repo:
- *   /home/rends/wm-mail-config.php
+ *   /home/william1/wm-mail-config.php   (one level above public_html)
  *   <?php return [
  *     'to'         => 'hello@williammatovu.com',   // where enquiries go (optional)
  *     'script_url' => 'https://script.google.com/macros/s/.../exec',
@@ -16,7 +16,7 @@
 
 const DEFAULT_TO   = 'hello@williammatovu.com';
 const FROM_ADDRESS = 'website@williammatovu.com';
-const CONFIG_FILE  = '/home/rends/wm-mail-config.php';
+define('CONFIG_FILE', dirname(__DIR__) . '/wm-mail-config.php');   // /home/william1/wm-mail-config.php
 const MIN_SECONDS  = 3;   // humans take longer than this to fill the form
 
 function back(string $result): void {
@@ -103,7 +103,7 @@ back($ok ? 'sent=1' : 'error=1');
 
 /** Post the enquiry to the Google Apps Script web app. Logs failures (never enquiry content). */
 function script_send(array $cfg, string $to, string $subject, string $body, string $replyTo): bool {
-    $log = '/home/rends/wm-mail.log';
+    $log = dirname(__DIR__) . '/wm-mail.log';
     $payload = json_encode([
         'secret' => (string) ($cfg['secret'] ?? ''), 'to' => $to,
         'subject' => $subject, 'body' => $body, 'replyTo' => $replyTo,

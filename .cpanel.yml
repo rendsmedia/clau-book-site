@@ -1,10 +1,10 @@
 ---
 # cPanel Git Version Control deployment for the CLAU book site.
-# LAUNCH branch: copies /site to the williammatovu.com document root.
+# LAUNCH branch: copies /site to williammatovu.com (cPanel account william1).
 # GO-LIVE: indexing on, sitemap at /sitemap.xml.
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/rends/public_html/williammatovu.com/
+    - export DEPLOYPATH=/home/william1/public_html/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R site/. $DEPLOYPATH
     - /bin/bash -c 'V=$(git rev-parse --short HEAD 2>/dev/null || date +%s); /bin/sed -i -E "s/\.(css|js)\?v=[A-Za-z0-9]+/.\1?v=$V/g" "$DEPLOYPATH"*.html'

@@ -54,7 +54,7 @@ On the `launch` branch: remove the `X-Robots-Tag` block from `site/.htaccess` (k
 The host intercepts outgoing SMTP, so mail goes through a small Google Apps Script, the same way as rendsmedia.com:
 
 1. Set up `tools/contact-form-google-script.gs` (steps are in the file).
-2. On the server, create `/home/rends/wm-mail-config.php` (outside `public_html`, never in this repo):
+2. On the server, create `/home/william1/wm-mail-config.php` (outside `public_html`, never in this repo):
    ```php
    <?php return ['to' => 'hello@williammatovu.com', 'script_url' => 'https://script.google.com/macros/s/.../exec', 'secret' => '...'];
    ```
@@ -91,8 +91,8 @@ Kindle edition: https://www.amazon.com/dp/B0B9K66JQT. Print in Uganda: [Aristoc 
 
 1. **Domain:** williammatovu.com points to the hosting, the domain is added in cPanel, and AutoSSL has issued a certificate for `williammatovu.com` and `www.williammatovu.com`.
 2. **Merge:** `go-live` is merged into `launch` and pushed.
-3. **cPanel → Git Version Control:** clone the repo at `/home/rends/repositories/williammatovu-com`, branch `launch`; then **Update from Remote** → **Deploy HEAD Commit**. Files land in `/home/rends/public_html/williammatovu.com/`; change `DEPLOYPATH` if the domain's document root differs.
-4. **Contact form:** `/home/rends/wm-mail-config.php` set up (see Contact form above); send a test message.
+3. **cPanel (account william1) → Git Version Control:** clone the repo to `/home/william1/repositories/clau-book-site`, switch to branch `launch`, then **Update from Remote** → **Deploy HEAD Commit**. Files land in `/home/william1/public_html/`.
+4. **Contact form:** `/home/william1/wm-mail-config.php` set up (see Contact form above); send a test message.
 5. **Staging:** redirect `book.rendsmedia.com` → `https://williammatovu.com` (cPanel → Domains → Redirects, permanent 301).
 6. **Google Search Console:** add the domain property `williammatovu.com`, verify with the DNS TXT record, submit `https://williammatovu.com/sitemap.xml`, then request indexing for the homepage.
 7. **Bing Webmaster Tools:** import the site from Search Console (covers Bing, DuckDuckGo, Yahoo).
