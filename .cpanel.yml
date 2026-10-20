@@ -1,7 +1,7 @@
 ---
-# cPanel Git Version Control deployment for the CLAU book site.
-# LAUNCH branch: copies /site to williammatovu.com (cPanel account william1).
-# GO-LIVE: indexing on, sitemap at /sitemap.xml.
+# cPanel Git Version Control deployment for williammatovu.com.
+# Copies /site to williammatovu.com (cPanel account william1) on "Deploy HEAD Commit".
+# Then stamps the commit code into CSS/JS links so browsers load the newest version.
 deployment:
   tasks:
     - export DEPLOYPATH=/home/william1/public_html/
