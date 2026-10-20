@@ -76,3 +76,24 @@ Kindle edition: https://www.amazon.com/dp/B0B9K66JQT. Print in Uganda: [Aristoc 
 
 - [ ] Add launch photos and the three YouTube videos
 - [ ] Author approves all wording, especially "The debates"
+
+## GO-LIVE (branch `go-live`)
+
+`go-live` is `launch` with everything switched on:
+
+- Search engines allowed on every page (404 and the form handler stay out of results)
+- `sitemap.xml` with the four public pages, referenced from `robots.txt`
+- Google structured data on the homepage (the book, its editions, and William as author)
+- Social share cards (WhatsApp, LinkedIn, X) with the cover image
+- Every visit lands on `https://williammatovu.com` (www and http redirect there)
+
+### Launch steps
+
+1. **Domain:** williammatovu.com points to the hosting, the domain is added in cPanel, and AutoSSL has issued a certificate for `williammatovu.com` and `www.williammatovu.com`.
+2. **Merge:** `go-live` is merged into `launch` and pushed.
+3. **cPanel → Git Version Control:** clone the repo at `/home/rends/repositories/williammatovu-com`, branch `launch`; then **Update from Remote** → **Deploy HEAD Commit**. Files land in `/home/rends/public_html/williammatovu.com/`; change `DEPLOYPATH` if the domain's document root differs.
+4. **Contact form:** `/home/rends/wm-mail-config.php` set up (see Contact form above); send a test message.
+5. **Staging:** redirect `book.rendsmedia.com` → `https://williammatovu.com` (cPanel → Domains → Redirects, permanent 301).
+6. **Google Search Console:** add the domain property `williammatovu.com`, verify with the DNS TXT record, submit `https://williammatovu.com/sitemap.xml`, then request indexing for the homepage.
+7. **Bing Webmaster Tools:** import the site from Search Console (covers Bing, DuckDuckGo, Yahoo).
+8. **Links:** add `https://williammatovu.com` to the Amazon Author Central profile, LinkedIn, YouTube channel and WhatsApp business profile.

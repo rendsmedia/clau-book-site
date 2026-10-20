@@ -1,10 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Always use https (removes the browser's "Not secure" warning on http:// visits)
+  # One address for everything: https://williammatovu.com (no www, no http)
+  # (cPanel's SSL checks in /.well-known/ are left alone so certificates keep renewing)
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTP_HOST} !^williammatovu\.com$ [NC]
+  RewriteRule ^ https://williammatovu.com%{REQUEST_URI} [L,R=301]
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteRule ^ https://williammatovu.com%{REQUEST_URI} [L,R=301]
 
   # Clean page addresses: /contact serves contact.html, and /contact.html redirects to /contact
   RewriteCond %{THE_REQUEST} \s/+(index)\.html[\s?] [NC]
@@ -18,6 +23,13 @@
 
 ErrorDocument 404 /404.html
 
+# Keep the contact handler's error page and 404 out of search results
+<IfModule mod_headers.c>
+  <FilesMatch "^(404\.html|contact\.php)$">
+    Header set X-Robots-Tag "noindex"
+  </FilesMatch>
+</IfModule>
+
 # Pages are always re-checked so updates show at once; CSS/JS are versioned (?v=) on each deploy.
 <IfModule mod_headers.c>
   <FilesMatch "\.html$">
@@ -25,8 +37,3 @@ ErrorDocument 404 /404.html
   </FilesMatch>
 </IfModule>
 
-# Keeps williammatovu.com off Google until the author approves going public.
-# Remove this block (and the robots meta in every page) to go public.
-<IfModule mod_headers.c>
-  Header set X-Robots-Tag "noindex, nofollow"
-</IfModule>
